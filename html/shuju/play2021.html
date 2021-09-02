@@ -1,0 +1,18 @@
+<iframe id="rand_player" width="100%" id="myiframe" scrolling="no" frameborder="0" allowfullscreen="true" height="100%px"></iframe>
+<script src="http://img-001.fenanr.com/shuju/m3u8.js"></script>
+<script>
+	function randomNum(minNum,maxNum){ 
+		switch(arguments.length){ 
+			case 1: 
+				return parseInt(Math.random()*minNum+1,10); 
+			break; 
+			case 2: 
+				return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
+			break; 
+				default: 
+					return minNum; 
+				break; 
+		} 
+	}
+	document.getElementById("rand_player").src="http://img-001.fenanr.com/play/?url="+videos[randomNum(0,videos.length-1)];
+</script>
